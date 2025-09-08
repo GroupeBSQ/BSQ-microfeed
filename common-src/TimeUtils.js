@@ -2,7 +2,7 @@ export function humanizeMs(ms, timezone = null) {
   const date = new Date(ms);
   let newDate;
   try {
-    newDate = new Date(date.toLocaleDateString('en-US', {timeZone: timezone}));
+    newDate = new Date(date.toLocaleDateString('fr-CA', {timeZone: timezone}));
   } catch (e) {
     newDate = date;
   }
