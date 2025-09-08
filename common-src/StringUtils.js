@@ -247,7 +247,7 @@ export const ADMIN_URLS = {
 /**
  * Public urls
  */
-function webItem(itemId, itemTitle = null, baseUrl = '/', locale = 'en') {
+function webItem(itemId, itemTitle = null, baseUrl = '/', locale = 'fr') {
   if (itemTitle) {
     const title = truncateString(itemTitle, 50, false);
     let slug = slugify(title, {
@@ -294,10 +294,10 @@ export const PUBLIC_URLS = {
     return urlJoin(baseUrl, 'json/openapi.html');
   },
   webItem,
-  jsonItem: (itemId, itemTitle = null, baseUrl = '/', locale = 'en') => {
+  jsonItem: (itemId, itemTitle = null, baseUrl = '/', locale = 'fr') => {
     return urlJoin(webItem(itemId, itemTitle, baseUrl, locale), 'json/');
   },
-  rssItem: (itemId, itemTitle = null, baseUrl = '/', locale = 'en') => {
+  rssItem: (itemId, itemTitle = null, baseUrl = '/', locale = 'fr') => {
     return urlJoin(webItem(itemId, itemTitle, baseUrl, locale), 'rss/');
   },
 };
